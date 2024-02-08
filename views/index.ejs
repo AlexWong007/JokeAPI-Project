@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (!locals.joke) { %>
+    <h1>JokeAPI Project</h1>
+    <form action="/submit" method="POST">
+        <label for="name">Enter Name:</label>
+        <input name="name" type="text" placeholder="Enter Your Name Here.">
+        <input type="submit" value="submit"></input>
+    </form>
+    <% } else { %>
+        <a href="/"><h3><%= joke %></h3></a>
+    <% } %>
+</body>
+</html>
